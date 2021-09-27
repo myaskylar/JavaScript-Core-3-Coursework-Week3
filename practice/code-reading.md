@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+line 4 is function Scope variable and line 1 is global variable. line 7 will log "1" as it can read the global variable. line 5 only log if function f1() been called.
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+line 34 will log 10 as function f1() as been called and inside that function at line 30 able to read global variable x, Meanwhile line 35 will throw referenceError as y is not defined, Because y is function scope variable only can access within the function.
 
 ## Question 3
 
@@ -62,3 +66,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+9 & {x:10} : Cant assign or modify the value of const. Const X value is 9 where we cant modify or add value on f1(x).It will log the global variable x value as 9; where else Const Y value is an object with key X, we add value to key X on f2(y). It will log the object with the value added to key x after f2(y) been called.
